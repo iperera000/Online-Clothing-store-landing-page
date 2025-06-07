@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    line-height: 1.6;
+}
+
+body {
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header{
+    padding: 150px;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    background-image: url(h.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-description{
+    color: darkred;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+
+}
+
+.nav{
+    box-shadow: 0 2px 5px;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-left: 20px;
+
+}
+
+.link a{
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: darkred;
+    transition: darkred 0.3s ease;
+}
+
+.link a:hover{
+    color: red;
+}
+
+.icon{
+    font-size: 1.5rem;
+    color: darkred;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.icon:hover{
+    transform: scale(1.05);
+    color: red;
+}
+
+.women,
+.men,
+.accessories{
+    padding: 20px 40px;
+    margin-top: 20px;
+}
+
+.women-title,
+.men-title,
+.accessories-title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    background-color: darkred;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.block-1,
+.block-2,
+.block-3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.women-btn,
+.men-btn,
+.accessories-btn{
+    display: block;
+    margin: 10px auto;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: darkred;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding: 10px 30px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.women-btn:hover,
+.men-btn:hover,
+.accessories-btn:hover{
+    transform: scale(1.1) translateY(-5px);
+    background-color: darksalmon;
+
+}
+
+.cta{
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    background-color: darksalmon;
+}
+
+.cta-info{
+    padding: 20px;
+}
+
+.cta-info-title,
+.cta-service-title,
+.cta-help-title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.link {
+    margin: 5px 0;
+}
+
+
+
+@keyframes appear{
+            from{
+                opacity: 0;
+                scale: 0.5;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+@media screen and (max-width: 768px) {
+  .block-1,
+  .block-2,
+  .block-3{
+    flex-direction: column;
+    align-items: center;
+}
+.nav-bar{
+    flex-direction: column;
+    gap: 10px;
+}
+}
